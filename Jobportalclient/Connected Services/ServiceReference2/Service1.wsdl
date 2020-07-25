@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/jobportalservice" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_InsertData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompanyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSingleCompanyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCompanyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePostedJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostedJob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeletePostedJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostedJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ApplyForCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyForCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ApplyForCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyForCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectUserbyCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserbyCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectUserbyCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserbyCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectUserbyPostCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserbyPostCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectUserbyPostCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUserbyPostCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePostedJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostedJob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePostedJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostedJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisplayAppliedPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAppliedPost" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisplayAppliedPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayAppliedPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAppliedPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppliedPosition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteAppliedPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppliedPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobApplicationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplicationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobApplicationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplicationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="InsertData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertData" message="tns:IService1_InsertData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertDataResponse" message="tns:IService1_InsertData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompanyData" message="tns:IService1_GetCompanyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyDataResponse" message="tns:IService1_GetCompanyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyData" message="tns:IService1_GetSingleCompanyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSingleCompanyDataResponse" message="tns:IService1_GetSingleCompanyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePostedJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeletePostedJob" message="tns:IService1_DeletePostedJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletePostedJobResponse" message="tns:IService1_DeletePostedJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyForCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ApplyForCompany" message="tns:IService1_ApplyForCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ApplyForCompanyResponse" message="tns:IService1_ApplyForCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUser" message="tns:IService1_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserResponse" message="tns:IService1_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUser" message="tns:IService1_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserResponse" message="tns:IService1_getUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectUserbyCompany" message="tns:IService1_SelectUserbyCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectUserbyCompanyResponse" message="tns:IService1_SelectUserbyCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUser" message="tns:IService1_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserResponse" message="tns:IService1_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyPostCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectUserbyPostCompany" message="tns:IService1_SelectUserbyPostCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectUserbyPostCompanyResponse" message="tns:IService1_SelectUserbyPostCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePostedJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePostedJob" message="tns:IService1_UpdatePostedJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePostedJobResponse" message="tns:IService1_UpdatePostedJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayAppliedPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DisplayAppliedPost" message="tns:IService1_DisplayAppliedPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DisplayAppliedPostResponse" message="tns:IService1_DisplayAppliedPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppliedPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAppliedPosition" message="tns:IService1_DeleteAppliedPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAppliedPositionResponse" message="tns:IService1_DeleteAppliedPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUsers" message="tns:IService1_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUsersResponse" message="tns:IService1_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompany" message="tns:IService1_GetCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyResponse" message="tns:IService1_GetCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetJobApplicationDetails" message="tns:IService1_GetJobApplicationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetJobApplicationDetailsResponse" message="tns:IService1_GetJobApplicationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCompany" message="tns:IService1_DeleteCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCompanyResponse" message="tns:IService1_DeleteCompany_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertData">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompanyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSingleCompanyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePostedJob">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeletePostedJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyForCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/ApplyForCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectUserbyCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyPostCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectUserbyPostCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePostedJob">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePostedJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayAppliedPost">
+      <soap:operation soapAction="http://tempuri.org/IService1/DisplayAppliedPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppliedPosition">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteAppliedPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetJobApplicationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IService1" type="tns:IService1">
+    <wsp:PolicyReference URI="#NetTcpBinding_IService1_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="InsertData">
+      <soap12:operation soapAction="http://tempuri.org/IService1/InsertData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyData">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetCompanyData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleCompanyData">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetSingleCompanyData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePostedJob">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeletePostedJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyForCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/ApplyForCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://tempuri.org/IService1/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap12:operation soapAction="http://tempuri.org/IService1/getUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SelectUserbyCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap12:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserbyPostCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/SelectUserbyPostCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePostedJob">
+      <soap12:operation soapAction="http://tempuri.org/IService1/UpdatePostedJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayAppliedPost">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DisplayAppliedPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppliedPosition">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteAppliedPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetJobApplicationDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IService1" binding="tns:NetTcpBinding_IService1">
+      <soap12:address location="net.tcp://localhost:5733/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:5733/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

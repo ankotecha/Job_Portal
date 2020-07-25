@@ -1,0 +1,8 @@
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\App_Data\Database1.mdf
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\jobportalservice.dll.config
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\jobportalservice.dll
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\jobportalservice.pdb
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.csprojAssemblyReference.cache
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.csproj.CoreCompileInputs.cache
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.dll
+C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.pdb

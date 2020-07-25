@@ -1,0 +1,676 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C127AE7E-E14E-4CCC-817C-D6D331A22E2C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jobportalclient</RootNamespace>
+    <AssemblyName>Jobportalclient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44385</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminHome.aspx" />
+    <Content Include="adminviewalluserapplication.aspx" />
+    <Content Include="adminviewcompany.aspx" />
+    <Content Include="adminviewpost.aspx" />
+    <Content Include="adminviewuser.aspx" />
+    <Content Include="ApplyInCompany.aspx" />
+    <Content Include="company.aspx" />
+    <None Include="Connected Services\ServiceReference2\item.disco" />
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="DisplayAppliedJob.aspx" />
+    <Content Include="images\logout.jpg" />
+    <Content Include="JobPosting.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="JobPosting.aspx" />
+    <Content Include="Theme1\css\main.css" />
+    <Content Include="Theme1\css\util.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Theme1\fonts\montserrat\OFL.txt" />
+    <Content Include="Theme1\images\bg-01.jpg" />
+    <Content Include="Theme1\images\icons\favicon.ico" />
+    <Content Include="Theme1\images\icons\icon-google.png" />
+    <Content Include="Theme1\images\icons\map-marker.png" />
+    <Content Include="Theme1\images\icons\symbol-01.png" />
+    <Content Include="Theme1\js\main.js" />
+    <Content Include="Theme1\vendor\animate\animate.css" />
+    <Content Include="Theme1\vendor\animsition\css\animsition.css" />
+    <Content Include="Theme1\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Theme1\vendor\animsition\js\animsition.js" />
+    <Content Include="Theme1\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\popper.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Theme1\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Theme1\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Theme1\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Theme1\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Theme1\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Theme1\vendor\daterangepicker\moment.js" />
+    <Content Include="Theme1\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Theme1\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Theme1\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Theme1\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Theme1\vendor\select2\select2.css" />
+    <Content Include="Theme1\vendor\select2\select2.js" />
+    <Content Include="Theme1\vendor\select2\select2.min.css" />
+    <Content Include="Theme1\vendor\select2\select2.min.js" />
+    <Content Include="Theme\css\main.css" />
+    <Content Include="Theme\css\util.css" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Theme\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Theme\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Theme\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Theme\fonts\montserrat\OFL.txt" />
+    <Content Include="Theme\images\bg-01.jpg" />
+    <Content Include="Theme\images\bg-02.jpg" />
+    <Content Include="Theme\images\icons\favicon.ico" />
+    <Content Include="Theme\images\icons\logo.png" />
+    <Content Include="Theme\index.html" />
+    <Content Include="Theme\js\main.js" />
+    <Content Include="Theme\vendor\animate\animate.css" />
+    <Content Include="Theme\vendor\animsition\css\animsition.css" />
+    <Content Include="Theme\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Theme\vendor\animsition\js\animsition.js" />
+    <Content Include="Theme\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Theme\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Theme\vendor\bootstrap\js\popper.js" />
+    <Content Include="Theme\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Theme\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Theme\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Theme\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Theme\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Theme\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Theme\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Theme\vendor\daterangepicker\moment.js" />
+    <Content Include="Theme\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Theme\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Theme\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Theme\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Theme\vendor\select2\select2.css" />
+    <Content Include="Theme\vendor\select2\select2.js" />
+    <Content Include="Theme\vendor\select2\select2.min.css" />
+    <Content Include="Theme\vendor\select2\select2.min.js" />
+    <Content Include="css\style.css" />
+    <Content Include="images\signin-image.jpg" />
+    <Content Include="images\signup-image.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="obj\Debug\Jobportalclient.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Jobportalclient.dll" />
+    <Content Include="obj\Debug\Jobportalclient.pdb" />
+    <Content Include="obj\Debug\TempPE\Connected Services.JobPortalRef.Reference.cs.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="UpdateDetails.aspx" />
+    <Content Include="UpdatePostedJob.aspx" />
+    <Content Include="User.aspx" />
+    <Content Include="UserHome.aspx" />
+    <Content Include="ViewByCompany.aspx" />
+    <Content Include="ViewByCompanyList.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="JobRegistration.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewalluserapplication.aspx.cs">
+      <DependentUpon>adminviewalluserapplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewalluserapplication.aspx.designer.cs">
+      <DependentUpon>adminviewalluserapplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewcompany.aspx.cs">
+      <DependentUpon>adminviewcompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewcompany.aspx.designer.cs">
+      <DependentUpon>adminviewcompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewpost.aspx.cs">
+      <DependentUpon>adminviewpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewpost.aspx.designer.cs">
+      <DependentUpon>adminviewpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewuser.aspx.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewuser.aspx.designer.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyInCompany.aspx.cs">
+      <DependentUpon>ApplyInCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyInCompany.aspx.designer.cs">
+      <DependentUpon>ApplyInCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="company.aspx.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company.aspx.designer.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAppliedJob.aspx.cs">
+      <DependentUpon>DisplayAppliedJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayAppliedJob.aspx.designer.cs">
+      <DependentUpon>DisplayAppliedJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobPosting.aspx.cs">
+      <DependentUpon>JobPosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobPosting.aspx.designer.cs">
+      <DependentUpon>JobPosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobRegistration.aspx.cs">
+      <DependentUpon>JobRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobRegistration.aspx.designer.cs">
+      <DependentUpon>JobRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateDetails.aspx.cs">
+      <DependentUpon>UpdateDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateDetails.aspx.designer.cs">
+      <DependentUpon>UpdateDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePostedJob.aspx.cs">
+      <DependentUpon>UpdatePostedJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePostedJob.aspx.designer.cs">
+      <DependentUpon>UpdatePostedJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewByCompany.aspx.cs">
+      <DependentUpon>ViewByCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewByCompany.aspx.designer.cs">
+      <DependentUpon>ViewByCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewByCompanyList.aspx.cs">
+      <DependentUpon>ViewByCompanyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewByCompanyList.aspx.designer.cs">
+      <DependentUpon>ViewByCompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Theme\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Theme\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Theme\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Theme\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Theme\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Theme\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Theme\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Theme\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="css\style.css.map" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Jobportalclient.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Jobportalclient.csprojAssemblyReference.cache" />
+    <None Include="Connected Services\ServiceReference2\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\Service1.wsdl" />
+    <None Include="packages.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61702</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44385/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e00ed627-27ea-42f5-a9fe-cff249a368d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="2558e5d8-bb2d-4cab-bc28-07a78936a5d7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="8be04227-28d4-4b53-9529-128fe7b63536" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="0b2f17ca-b38d-4ec1-b47d-0d397b073d76" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="d2e4da1e-c890-4c30-a10e-da7cc7384d7b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="9c333fe5-5fc8-4789-b508-624d218acb8d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="026003b5-4e12-4896-b140-16690e1ace05" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/jobportalservice/Service1/?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
